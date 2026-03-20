@@ -30,30 +30,21 @@ OpenClaw VisGen 是一个专为 OpenClaw 设计的通用型可视化技能生成
 *   **前端框架**：React 19 + Vite
 *   **样式方案**：Tailwind CSS
 *   **图标库**：Lucide React
-*   **AI 驱动**：Google Gemini API (`gemini-3.1-pro-preview`)
 *   **生成产物**：原生 HTML + ECharts (CDN) + Tailwind CSS (CDN)
 
-## 💻 开发者指南
+## 💻 OpenClaw 接入指南
 
-### 环境要求
-*   Node.js (推荐 v18+)
-*   有效的 Gemini API Key
+本工具专为 OpenClaw 平台设计，无需手动配置大模型 API Key，直接将技能赋予 OpenClaw 即可运行。
 
-### 本地运行
+### 接入与使用步骤
 
-1. 安装依赖：
-   \`\`\`bash
-   npm install
-   \`\`\`
-2. 配置环境变量：
-   在项目根目录或 AI Studio 的 Secrets 面板中配置您的 Gemini API Key：
-   \`\`\`env
-   GEMINI_API_KEY="your_api_key_here"
-   \`\`\`
-3. 启动开发服务器：
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+1. **导入技能文档**：将本项目中的 `skill.md` 文件的完整内容，作为 System Prompt 或技能指令导入到 OpenClaw 的 Agent 配置中。
+2. **启动 Agent**：在 OpenClaw 中启动配置好该技能的 Agent。
+3. **交互与生成**：
+   - 用户向 OpenClaw 上传数据文件（如 CSV、JSON）或直接发送数据文本。
+   - 用户用自然语言描述可视化需求（例如：“帮我把这份销售数据做成带有数据筛选器的折线图”）。
+   - OpenClaw 将自动根据 `skill.md` 的规范，生成包含 ECharts 和 Tailwind CSS 的单文件交互式 HTML。
+   - OpenClaw 会自动引导用户在本地或云端服务器启动 Web 服务（如开放 3456 端口），并提供标准的访问链接和防火墙排查指南。
 
 ## 📄 许可证
 
