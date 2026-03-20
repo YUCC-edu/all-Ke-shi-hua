@@ -1,0 +1,5 @@
+{
+  "name": "OpenClaw VisGen",
+  "description": "A universal visualization skill generator for OpenClaw. Converts data and requirements into beautiful, standalone, locally-runnable HTML visualization pages.",
+  "requestFramePermissions": []
+}

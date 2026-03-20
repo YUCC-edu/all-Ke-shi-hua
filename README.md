@@ -1,11 +1,60 @@
-<div align="center">
+# OpenClaw VisGen (可视化生成器)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+OpenClaw VisGen 是一个专为 OpenClaw 设计的通用型可视化技能生成工具。它能够将用户的原始数据和自然语言需求，一键转化为精美、可本地独立运行的 HTML 可视化网页。
 
-  <h1>Built with AI Studio</h2>
+## ✨ 核心特性
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+*   **通用数据输入**：支持直接粘贴 JSON、CSV 等任意格式的原始数据。
+*   **自然语言驱动**：只需用自然语言描述您的可视化需求（例如：“展示按月统计的销售额柱状图和用户占比饼图”）。
+*   **内置精美模板**：提供多种专业级设计配方，满足不同场景的展示需求。
+*   **单文件输出**：生成的网页是一个完全独立的单文件 HTML（内置 Tailwind CSS 和 ECharts 的 CDN），无需任何环境配置即可在任意浏览器中双击打开。
+*   **实时预览与导出**：内置所见即所得的预览窗口，并支持一键下载 HTML 文件到本地。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 🎨 内置样式模板
 
-</div>
+1.  **技术仪表盘 (Technical Dashboard)**：深色专业风格，适合密集型数据、监控大盘，感觉像任务控制中心。
+2.  **杂志级报告 (Editorial Report)**：高对比度，大排版，适合汇报和展示，具有强烈的视觉冲击力。
+3.  **粗野主义创意 (Brutalist Creative)**：前卫、高饱和度色彩（如霓虹色搭配纯黑/纯白），适合创意型数据展示。
+4.  **极简实用 (Clean Utility)**：干净、现代、留白多，适合金融、后台管理或注重功能性的数据展示。
+
+## 🚀 如何使用
+
+1.  **准备数据**：在左侧面板的 **“原始数据”** 文本框中粘贴您的数据。
+2.  **描述需求**：在 **“可视化需求”** 文本框中用自然语言描述您想要生成的图表类型和布局。
+3.  **选择模板**：在 **“样式模板”** 列表中选择一个最符合您期望的视觉风格。
+4.  **生成网页**：点击右上角的 **“生成网页”** 按钮，AI 将开始为您编写代码。
+5.  **预览与导出**：生成完成后，您可以在右侧区域直接预览效果。如果满意，点击 **“导出 HTML”** 即可将文件下载到本地。
+
+## 🛠️ 技术栈
+
+*   **前端框架**：React 19 + Vite
+*   **样式方案**：Tailwind CSS
+*   **图标库**：Lucide React
+*   **AI 驱动**：Google Gemini API (`gemini-3.1-pro-preview`)
+*   **生成产物**：原生 HTML + ECharts (CDN) + Tailwind CSS (CDN)
+
+## 💻 开发者指南
+
+### 环境要求
+*   Node.js (推荐 v18+)
+*   有效的 Gemini API Key
+
+### 本地运行
+
+1. 安装依赖：
+   \`\`\`bash
+   npm install
+   \`\`\`
+2. 配置环境变量：
+   在项目根目录或 AI Studio 的 Secrets 面板中配置您的 Gemini API Key：
+   \`\`\`env
+   GEMINI_API_KEY="your_api_key_here"
+   \`\`\`
+3. 启动开发服务器：
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+## 📄 许可证
+
+Apache-2.0 License
